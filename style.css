@@ -52,6 +52,7 @@ body {
   background-position: bottom;
     animation: grassSway 3s ease-in-out infinite;
     z-index: 2;
+  overflow: hidden;
 }
 
 .fg-grass {
@@ -61,4 +62,5 @@ body {
   background-size: contain;
   background-position: bottom;
     animation: grassSway 2.5s ease-in-out infinite;
-    z-index: 10;
+    z-index: 3;
+overflow: hidden;
