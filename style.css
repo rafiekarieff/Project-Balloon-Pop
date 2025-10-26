@@ -9,11 +9,7 @@ body {
 }
 
 .body-home {
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden; 
+  width: 100%; 
 }
 .logo {
     max-width: 100%;
