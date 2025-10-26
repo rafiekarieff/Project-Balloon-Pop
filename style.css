@@ -8,7 +8,7 @@ body {
   height: 100%;
 }
 
-.background {
+#body-background {
   position: absolute;
   top: 0;
     left: 0;
@@ -17,7 +17,7 @@ body {
     overflow: hidden;
 }
 
-.logo {
+#home-logo {
     max-width: 100%;
     max-height: 40vh;
     margin-bottom: 2rem;
@@ -26,7 +26,7 @@ body {
   padding: 25px 10px 10px 10px;
 }
 
-.start-button {
+#home-start-button {
     max-width: 60%;
     max-height: 15vh;
     cursor: pointer;
