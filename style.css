@@ -11,11 +11,14 @@ body {
 .body-home {
   width: 100%; 
 }
+
 .logo {
     max-width: 100%;
     max-height: 40vh;
     margin-bottom: 2rem;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3))
+    display: block;
+  margin: auto;
+  padding: 25px 10px 10px 10px;
 }
 
 .start-button {
@@ -23,7 +26,9 @@ body {
     max-height: 15vh;
     cursor: pointer;
     transition: transform 0.2s ease;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3))
+  display: block;
+  margin: auto;
+  padding: 25px 10px 10px 10px;
 }
 
 .start-button:hover {
