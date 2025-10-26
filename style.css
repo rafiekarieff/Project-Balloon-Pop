@@ -14,4 +14,27 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden; 
+}
+.logo {
+    max-width: 100%;
+    max-height: 40vh;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3))
+}
+
+.start-button {
+    max-width: 60%;
+    max-height: 15vh;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3))
+}
+
+.start-button:hover {
+    transform: scale(1.05);
+}
+
+.start-button:active {
+    transform: scale(0.95);
 }
