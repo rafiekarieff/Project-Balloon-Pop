@@ -6,9 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-    background: #87CEEB;
+    background-image: url('images/backgound.png');
     height: 100vh;
     width: 100vw;
 }
