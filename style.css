@@ -1,41 +1,17 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  overflow: hidden;
-  background: skyblue;
+  padding: 0;
+  height: 100%;
 }
 
-#game {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
+.body-home {
+  background-image: url("images/background.png");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-/* Balloon style */
-.balloon {
-  position: absolute;
-  bottom: 0;
-  width: 60px;
-  height: 80px;
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  background: red;
-  cursor: pointer;
-  animation: floatUp 6s linear forwards;
-}
-
-@keyframes floatUp {
-  from { bottom: -100px; opacity: 1; }
-  to { bottom: 100vh; opacity: 0; }
-}
-
-/* Pop animation */
-.pop {
-  animation: pop 0.2s ease-out;
-  transform: scale(1.2);
-  background: radial-gradient(white, transparent);
-}
-
-@keyframes pop {
-  100% { transform: scale(2); opacity: 0; }
-}
-
