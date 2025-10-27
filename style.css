@@ -39,7 +39,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #87CEEB 0%, #98FB98 100%);
+    background-image: url("images/background.png");
 }
 
 .start-content {
