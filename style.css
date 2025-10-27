@@ -135,20 +135,20 @@ body {
 
 /* Grass Layers */
 .grass-layer {
-    position: absolute;
-    bottom: 10;
+    position: fixed;
+    bottom: 0;
     left: 0;
     width: 200%;
     height: 18%; /* Reduced to match reference proportions */
-    background-size: contain;
-    background-position: bottom;
-    
+    overflow: visible;
+
+
 }
 
 .background-grass {
     background-image: url('images/background-grass.png');
-    animation: sway 3s ease-in-out infinite;
-  transform-origin: bottom center;
+    animation: sway 2s ease-in-out infinite;
+    transform-origin: bottom center;
 
 
     z-index: 2;
