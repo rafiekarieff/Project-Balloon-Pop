@@ -157,7 +157,7 @@ function spawnBalloon() {
     balloon.className = 'balloon';
     
     // Random properties
-    const size = 120 + Math.random() * 80; // 120-200px (much larger to match reference)
+    const size = 150 + Math.random() * 80; // 120-200px (much larger to match reference)
     const startX = Math.random() * (window.innerWidth - size);
     const speed = 0.5 + Math.random() * 1; // 0.5-1.5 pixels per frame
     const swayAmount = 3 + Math.random() * 4; // 3-7 pixels sway (increased for larger balloons)
