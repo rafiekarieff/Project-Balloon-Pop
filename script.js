@@ -327,3 +327,22 @@ window.forceStartGame = function() {
     startGame();
 };
 
+const bgGrass = document.getElementById('grass-background');
+const fgGrass = document.getElementById('grass-foreground');
+
+let t = 0;
+
+function animateGrass() {
+  t += 0.02; // speed of sway
+
+  // create natural back-and-forth motion using sine wave
+  const bgOffset = Math.sin(t) * 10;   // background moves slower
+  const fgOffset = Math.sin(t * 1.5) * 20; // foreground moves faster
+
+  bgGrass.style.transform = `translateX(${bgOffset}px)`;
+  fgGrass.style.transform = `translateX(${fgOffset}px)`;
+
+  requestAnimationFrame(animateGrass);
+}
+
+animateGrass();
