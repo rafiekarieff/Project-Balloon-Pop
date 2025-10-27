@@ -136,25 +136,31 @@ body {
 /* Grass Layers */
 .grass-layer {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: -50;
+    left: -100px;
     width: 200%;
     height: 18%; /* Reduced to match reference proportions */
     background-size: contain;
-    background-repeat: repeat-x;
     background-position: bottom;
+    
 }
 
 .background-grass {
     background-image: url('images/background-grass.png');
-    animation: grassScroll 20s linear infinite;
+    animation: sway 3s ease-in-out infinite;
+  transform-origin: bottom center;
+
+
     z-index: 2;
 }
 
 .foreground-grass {
     background-image: url('images/foreground-grass.png');
-    animation: grassScroll 15s linear infinite;
-    z-index: 10;
+    animation: sway 3s ease-in-out infinite;
+  transform-origin: bottom center;
+
+
+    z-index: 4;
 }
 
 /* Balloons Container */
@@ -273,6 +279,16 @@ body {
     75% { transform: translateX(-5px) translateY(-2px); }
 }
 
+@keyframes windSway {
+  0%   { transform: skewX(0deg); }
+  50%  { transform: skewX(3deg); }
+  100% { transform: skewX(0deg); }
+}
+
+.grass {
+  animation: windSway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .title-logo {
