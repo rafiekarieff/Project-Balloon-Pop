@@ -135,7 +135,7 @@ body {
 
 /* Grass Layers */
 .grass-layer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 200%;
