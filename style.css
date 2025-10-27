@@ -7,22 +7,64 @@ body {
   background-attachment: fixed;
 }
 
-#home-logo {
-    max-width: 100%;
-    max-height: auto;
-    display: block;
-    margin: auto;
-    padding: 25px 10px 10px 10px;
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#home-start-button {
-    max-width: 60%;
-    max-height: auto;
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background: #87CEEB;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Screen Management */
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.screen.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Start Screen */
+#startScreen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #87CEEB 0%, #98FB98 100%);
+}
+
+.start-content {
+    text-align: center;
+    animation: float 3s ease-in-out infinite;
+}
+
+.title-logo {
+    max-width: 90%; /* Larger to match reference */
+    max-height: 45vh; /* Larger to match reference */
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.start-button {
+    max-width: 70%; /* Larger to match reference */
+    max-height: 18vh; /* Larger to match reference */
     cursor: pointer;
     transition: transform 0.2s ease;
-    display: block;
-    margin: auto;
-    padding: 25px 10px 10px 10px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
 
 .start-button:hover {
@@ -33,34 +75,269 @@ body {
     transform: scale(0.95);
 }
 
-.grass {
+/* Game Screen */
+#gameScreen {
+    position: relative;
+}
+
+.game-background {
+    background-image: url("images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Sky Background */
+.sky {
+    background-image: url("images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* Birds Animation */
+.birds-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.bird {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background-image: url('images/bird-frame-1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: birdFly 8s linear infinite, birdFlap 0.5s steps(5) infinite;
+}
+
+.bird-1 {
+    top: 15%;
+    animation-delay: 0s;
+    animation-duration: 12s, 0.5s;
+}
+
+.bird-2 {
+    top: 25%;
+    animation-delay: -4s;
+    animation-duration: 10s, 0.6s;
+}
+
+.bird-3 {
+    top: 35%;
+    animation-delay: -8s;
+    animation-duration: 14s, 0.4s;
+}
+
+/* Grass Layers */
+.grass-layer {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 15%; /* Made even smaller */
+    width: 200%;
+    height: 18%; /* Reduced to match reference proportions */
     background-size: contain;
     background-repeat: repeat-x;
     background-position: bottom;
-
-
-.bg-grass {
-  position: absolute;
-   width: 100%;
-    height: 10%;
-  background-size: contain;
-  background-position: bottom;
-    animation: grassSway 3s ease-in-out infinite;
-    z-index: 2;
-  overflow: hidden;
 }
 
-.fg-grass {
-   position: absolute;
-   width: 100%;
-    height: 10%;
-  background-size: contain;
-  background-position: bottom;
-    animation: grassSway 2.5s ease-in-out infinite;
-    z-index: 3;
-overflow: hidden;
+.background-grass {
+    background-image: url('images/background-grass.png');
+    animation: grassScroll 20s linear infinite;
+    z-index: 2;
+}
+
+.foreground-grass {
+    background-image: url('images/foreground-grass.png');
+    animation: grassScroll 15s linear infinite;
+    z-index: 10;
+}
+
+/* Balloons Container */
+.balloons-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.balloon {
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: transform 0.1s ease;
+    z-index: 6;
+}
+
+.balloon:hover {
+    transform: scale(1.05);
+}
+
+.balloon.popping {
+    pointer-events: none;
+    animation: balloonPop 0.3s ease-out forwards;
+}
+
+/* Game UI */
+.game-ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.score-display {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 2px;
+    pointer-events: none;
+}
+
+.score-digit {
+    width: 40px;
+    height: 50px; /* Larger to match reference */
+    image-rendering: pixelated;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px; /* Larger to match reference */
+    height: 50px;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: transform 0.2s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+}
+
+.back-button:active {
+    transform: scale(0.9);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes birdFly {
+    0% { transform: translateX(-100px); }
+    100% { transform: translateX(calc(100vw + 100px)); }
+}
+
+@keyframes birdFlap {
+    0% { background-image: url('images/bird-frame-1.png'); }
+    20% { background-image: url('images/bird-frame-2.png'); }
+    40% { background-image: url('images/bird-frame-3.png'); }
+    60% { background-image: url('images/bird-frame-4.png'); }
+    80% { background-image: url('images/bird-frame-5.png'); }
+    100% { background-image: url('images/bird-frame-1.png'); }
+}
+
+@keyframes grassScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes balloonPop {
+    0% { 
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% { 
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% { 
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes balloonFloat {
+    0%, 100% { transform: translateX(0px) translateY(0px); }
+    25% { transform: translateX(5px) translateY(-2px); }
+    50% { transform: translateX(0px) translateY(-5px); }
+    75% { transform: translateX(-5px) translateY(-2px); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .title-logo {
+        max-width: 95%; /* Maintain larger size on mobile */
+        max-height: 40vh;
+    }
+    
+    .start-button {
+        max-width: 75%; /* Maintain larger size on mobile */
+        max-height: 15vh;
+    }
+    
+    .bird {
+        width: 50px; /* Slightly larger birds */
+        height: 35px;
+    }
+    
+    .grass-layer {
+        height: 15%; /* Smaller grass on mobile */
+    }
+    
+    .score-digit {
+        width: 35px; /* Larger digits on mobile */
+        height: 45px;
+    }
+    
+    .back-button {
+        width: 45px; /* Larger button on mobile */
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-logo {
+        max-width: 98%; /* Even larger on small mobile */
+        max-height: 35vh;
+    }
+    
+    .start-button {
+        max-width: 85%; /* Even larger on small mobile */
+        max-height: 12vh;
+    }
+    
+    .bird {
+        width: 40px; /* Larger birds on small mobile */
+        height: 30px;
+    }
+    
+    .grass-layer {
+        height: 12%; /* Even smaller grass on small mobile */
+    }
+    
+    .score-digit {
+        width: 30px; /* Larger digits on small mobile */
+        height: 40px;
+    }
+    
+    .back-button {
+        width: 40px; /* Larger button on small mobile */
+        height: 40px;
+    }
+}
