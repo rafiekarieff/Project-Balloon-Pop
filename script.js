@@ -17,6 +17,7 @@ const balloonTypes = [
     { color: 'yellow', image: 'images/yellow-balloon.png', popImage: 'images/yellow-pop.png' },
     { color: 'orange', image: 'images/orange-balloon.png', popImage: 'images/orange-pop.png' },
     { color: 'pink', image: 'images/pink-balloon.png', popImage: 'images/pink-pop.png' }
+    { color: 'purple', image: 'images/purple-balloon.png', popImage: 'images/purple-pop.png' }
 ];
 
 // Digit images mapping
