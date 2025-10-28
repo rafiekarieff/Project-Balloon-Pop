@@ -140,8 +140,7 @@ body {
   left: -5vw;
   width: 110vw;
   height: 25vh;
-  background-repeat: repeat-x;
-  background-size: cover;
+  background-size: contain;
   transform-origin: bottom center;
   overflow: visible;
   pointer-events: none; 
