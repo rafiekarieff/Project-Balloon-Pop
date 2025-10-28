@@ -136,8 +136,7 @@ body {
 }
 
 .grass-layer {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
   left: -5vw;
   width: 110vw;
   height: 25vh;
@@ -145,18 +144,22 @@ body {
   background-size: cover;
   transform-origin: bottom center;
   overflow: visible;
+  pointer-events: none; 
 }
 
 .background-grass {
   background-image: url('images/background-grass.png');
   animation: sway 3s ease-in-out infinite;
+  animation-delay: 1s;
   z-index: 2;
+  bottom: -40; 
 }
 
 .foreground-grass {
   background-image: url('images/foreground-grass.png');
   animation: sway 4s ease-in-out infinite;
   z-index: 10;
+  bottom: -60;  
 }
 
 /* Gentle wind sway */
