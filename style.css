@@ -142,7 +142,7 @@ body {
     bottom: 0;
     left: -10vw; /* start slightly off-screen */
     width: 120vw; /* extend beyond both edges */
-    height: 200px; /* Reduced to match reference proportions */
+    height: 20px; /* Reduced to match reference proportions */
     overflow: visible;
     background-size: cover;
     
