@@ -159,7 +159,7 @@ body {
   background-image: url('images/foreground-grass.png');
   animation: sway 4s ease-in-out infinite;
   z-index: 10;
-  bottom: -50;  
+   
 }
 
 /* Gentle wind sway */
