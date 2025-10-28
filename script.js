@@ -3,7 +3,7 @@ let gameState = {
     isPlaying: false,
     score: 0,
     balloons: [],
-    maxBalloons: 12,
+    maxBalloons: 10,
     spawnTimer: 0,
     spawnInterval: 1000, // milliseconds
     lastSpawnTime: 0
@@ -327,8 +327,8 @@ window.forceStartGame = function() {
     startGame();
 };
 
-const bgGrass = document.getElementById('grass-background');
-const fgGrass = document.getElementById('grass-foreground');
+const background-grass = document.getElementById('grass-background');
+const foreground-grass = document.getElementById('grass-foreground');
 
 let t = 0;
 
@@ -336,11 +336,11 @@ function animateGrass() {
   t += 0.02; // speed of sway
 
   // create natural back-and-forth motion using sine wave
-  const bgOffset = Math.sin(t) * 10;   // background moves slower
-  const fgOffset = Math.sin(t * 1.5) * 20; // foreground moves faster
+  const background-grassOffset = Math.sin(t) * 10;   // background moves slower
+  const foreground-grassOffset = Math.sin(t * 1.5) * 20; // foreground moves faster
 
-  bgGrass.style.transform = `translateX(${bgOffset}px)`;
-  fgGrass.style.transform = `translateX(${fgOffset}px)`;
+  background-grass.style.transform = `translateX(${bgOffset}px)`;
+  foreground-grass.style.transform = `translateX(${fgOffset}px)`;
 
   requestAnimationFrame(animateGrass);
 }
