@@ -290,17 +290,17 @@ body {
     }
     
     .start-button {
-        max-width: 75%; /* Maintain larger size on mobile */
+        max-width: 55%; /* Maintain larger size on mobile */
         max-height: 15vh;
     }
     
     .bird {
-        width: 50px; /* Slightly larger birds */
-        height: 35px;
+        width: 70px; /* Slightly larger birds */
+        height: 50px;
     }
     
     .grass-layer {
-        height: 15%; /* Smaller grass on mobile */
+        height: 25%; /* Smaller grass on mobile */
     }
     
     .score-digit {
