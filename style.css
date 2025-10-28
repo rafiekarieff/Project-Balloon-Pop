@@ -141,8 +141,7 @@ body {
   left: 0;
   width: 100px;
   height: 25px;
-  background-size: cover;
-  background-position: bottom;  
+  background-size: cover; 
   transform-origin: bottom center;
   overflow: visible;
   pointer-events: none; 
