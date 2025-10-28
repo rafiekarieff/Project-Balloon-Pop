@@ -163,11 +163,6 @@ body {
    
 }
 
-/* Gentle wind sway */
-@keyframes sway {
-  0%, 100% { transform: rotate(0deg); }
-  50% { transform: rotate(1.5deg); }
-}
 
 /* Balloons Container */
 .balloons-container {
