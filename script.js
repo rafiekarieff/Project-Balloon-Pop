@@ -16,7 +16,7 @@ const balloonTypes = [
     { color: 'green', image: 'images/green-balloon.png', popImage: 'images/green-pop.png' },
     { color: 'yellow', image: 'images/yellow-balloon.png', popImage: 'images/yellow-pop.png' },
     { color: 'orange', image: 'images/orange-balloon.png', popImage: 'images/orange-pop.png' },
-    { color: 'pink', image: 'images/pink-balloon.png', popImage: 'images/pink-pop.png' }
+    { color: 'pink', image: 'images/pink-balloon.png', popImage: 'images/pink-pop.png' },
     { color: 'purple', image: 'images/purple-balloon.png', popImage: 'images/purple-pop.png' }
 ];
 
