@@ -57,7 +57,7 @@ body {
 
 .start-button {
     max-width: 50%; /* Larger to match reference */
-    max-height: 15vh; /* Larger to match reference */
+    max-height: 100px; /* Larger to match reference */
     cursor: pointer;
     transition: transform 0.2s ease;
     
