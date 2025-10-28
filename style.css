@@ -155,7 +155,6 @@ body {
     width: 100%;
     height: auto; /* Reduced to match reference proportions */
     overflow: visible;
-
     z-index: 2;
 }
 
@@ -169,7 +168,6 @@ body {
     width: 100%;
     height: auto; /* Reduced to match reference proportions */
     overflow: visible;
-
     z-index: 4;
 }
 
@@ -231,7 +229,7 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 60px; /* Larger to match reference */
+    width: 70px; /* Larger to match reference */
     height: auto;
     cursor: pointer;
     pointer-events: auto;
