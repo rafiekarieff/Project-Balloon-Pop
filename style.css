@@ -145,12 +145,11 @@ body {
   transform-origin: bottom center;
   overflow: visible;
   pointer-events: none; 
-  transform: scaleY(1.1) 
+  
 }
 
 .background-grass {
   background-image: url('images/background-grass.png');
-  animation: sway 3s ease-in-out infinite;
   animation-delay: 1s;
   z-index: 2;
    
@@ -158,8 +157,7 @@ body {
 
 .foreground-grass {
   background-image: url('images/foreground-grass.png');
-  animation: sway 4s ease-in-out infinite;
-  z-index: 10;
+    z-index: 10;
    
 }
 
@@ -280,11 +278,6 @@ body {
     75% { transform: translateX(-5px) translateY(-2px); }
 }
 
-@keyframes windSway {
-  0%   { transform: skewX(0deg); }
-  50%  { transform: skewX(3deg); }
-  100% { transform: skewX(0deg); }
-}
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
