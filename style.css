@@ -139,7 +139,7 @@ body {
   position: absolute;
   bottom: 0;
   left: -10;
-  width: 100%;
+  width: 110%;
   height: 160px;
   overflow: visible; /* allows child to render below */
   z-index: 10;
@@ -150,7 +150,7 @@ body {
   position: absolute;
   bottom: 0; 
   left: -10%;
-  width: 100%;
+  width: 110%;
   height: 160px;
   transform-origin: bottom center;
   overflow: visible;
