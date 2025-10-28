@@ -7,22 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Animated Birds -->
-            <div class="birds-container">
-                <div class="bird bird-1"></div>
-                <div class="bird bird-2"></div>
-                <div class="bird bird-3"></div>
-            </div>
-            
-            <!-- Background Grass -->
-            <div class="grass-layer background-grass"></div>
-            
-            <!-- Balloons Container -->
-            <div id="balloonsContainer" class="balloons-container"></div>
-            
-            <!-- Foreground Grass -->
-            <div class="grass-layer foreground-grass"></div>
-        </div> 
+    <!-- Fixed background -->
+    <div class="sky"></div>
+
+    <!-- Birds and Grass visible on all screens -->
+    <div class="birds-container">
+        <div class="bird bird-1"></div>
+        <div class="bird bird-2"></div>
+        <div class="bird bird-3"></div>
+    </div>
+
+    <div class="grass-layer background-grass"></div>
+    <div class="grass-layer foreground-grass"></div>
+
     <!-- Start Screen -->
     <div id="startScreen" class="screen active">
         <div class="start-content">
@@ -34,23 +31,18 @@
 
     <!-- Game Screen -->
     <div id="gameScreen" class="screen">
-        <!-- Game Background -->
         <div class="game-background">
-            <!-- Sky Background -->
-            <div class="sky"></div>
-            
-           
+            <!-- Balloons Container -->
+            <div id="balloonsContainer" class="balloons-container"></div>
+        </div>
 
         <!-- Game UI -->
         <div class="game-ui">
-            <!-- Score Display -->
             <div class="score-display">
                 <img src="images/no-0.png" alt="0" class="score-digit" id="scoreHundreds">
                 <img src="images/no-0.png" alt="0" class="score-digit" id="scoreTens">
                 <img src="images/no-0.png" alt="0" class="score-digit" id="scoreOnes">
             </div>
-            
-            <!-- Back Button -->
             <img src="images/back-icon.png" alt="Back" class="back-button" id="backButton">
         </div>
     </div>
@@ -62,4 +54,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
