@@ -152,14 +152,14 @@ body {
     background-image: url('images/background-grass.png');
     animation: sway 2s ease-in-out infinite;
     transform-origin: bottom center;
-    
+    z-index: 2; 
 }
 
 .foreground-grass {
     background-image: url('images/foreground-grass.png');
     animation: sway 3s ease-in-out infinite;
     transform-origin: bottom center;
-   
+    z-index: 4;
 }
 
 /* Balloons Container */
