@@ -154,8 +154,7 @@ body {
   height: 160px;
   transform-origin: bottom center;
   overflow: visible;
-  pointer-events: none;
-  background-position: center bottom;  
+  pointer-events: none; 
   transform: scaleY(1.1) 
 }
 
