@@ -137,11 +137,10 @@ body {
 
 .grass-layer {
   position: absolute;
-  bottom: 0; 
-  left: 0;
-  width: 100px;
-  height: 25px;
-  background-size: cover; 
+  bottom: -50; 
+  left: -10px;
+  width: 110%;
+  height: 150px;
   transform-origin: bottom center;
   overflow: visible;
   pointer-events: none; 
