@@ -137,6 +137,7 @@ body {
 
 .grass-layer {
   position: absolute;
+  bottom: 0; 
   left: -5vw;
   width: 110vw;
   height: 25vh;
