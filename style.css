@@ -139,7 +139,7 @@ body {
   position: absolute;
   bottom: 0; 
   left: 0;
-  width: 100%;
+  width: 100px;
   height: 25px;
   background-size: cover;
   background-position: bottom;  
