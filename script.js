@@ -327,22 +327,24 @@ window.forceStartGame = function() {
     startGame();
 };
 
-const background-grass = document.getElementById('grass-background');
-const foreground-grass = document.getElementById('grass-foreground');
+// 🌿 Animate Grass Layers
+window.addEventListener('load', () => {
+  const bgGrass = document.querySelector('.background-grass');
+  const fgGrass = document.querySelector('.foreground-grass');
+  let t = 0;
 
-let t = 0;
+  function animateGrass() {
+    t += 0.02; // speed of sway
 
-function animateGrass() {
-  t += 0.02; // speed of sway
+    // Natural side-to-side motion
+    const bgOffset = Math.sin(t) * 10;   // smaller movement for background
+    const fgOffset = Math.sin(t * 1.5) * 20; // bigger sway for foreground
 
-  // create natural back-and-forth motion using sine wave
-  const background-grassOffset = Math.sin(t) * 10;   // background moves slower
-  const foreground-grassOffset = Math.sin(t * 1.5) * 20; // foreground moves faster
+    if (bgGrass) bgGrass.style.transform = `translateX(${bgOffset}px)`;
+    if (fgGrass) fgGrass.style.transform = `translateX(${fgOffset}px)`;
 
-  background-grass.style.transform = `translateX(${bgOffset}px)`;
-  foreground-grass.style.transform = `translateX(${fgOffset}px)`;
+    requestAnimationFrame(animateGrass);
+  }
 
-  requestAnimationFrame(animateGrass);
-}
-
-animateGrass();
+  animateGrass();
+});
