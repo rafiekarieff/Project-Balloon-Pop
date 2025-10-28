@@ -135,16 +135,6 @@ body {
     animation-duration: 14s, 0.6s;
 }
 
-.grass-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: -10;
-  width: 110%;
-  height: 160px;
-  overflow: visible; /* allows child to render below */
-  z-index: 10;
-  pointer-events: none;
-
 
 .grass-layer {
   position: absolute;
