@@ -137,8 +137,8 @@ body {
 .grass-layer {
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 125%;
+    right: 10px;
+    width: 100%;
     height: 10%; /* Reduced to match reference proportions */
     overflow: visible;
     background-size: cover;
