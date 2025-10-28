@@ -80,21 +80,24 @@ body {
 }
 
 .game-background {
-    background-image: url("images/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+   position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  touch-action: none; /* prevents background "scrolling" on touch */
 }
-
 /* Sky Background */
 .sky {
-    background-image: url("images/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('images/background.png') center / cover no-repeat;
+  z-index: 0;
 }
+
 /* Birds Animation */
 .birds-container {
     position: absolute;
