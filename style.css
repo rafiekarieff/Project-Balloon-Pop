@@ -6,15 +6,12 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-    background-image: url("images/background.png");
-    height: 100vh;
-    width: 100vw;
-   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; 
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background: #87CEEB;
+  position: relative;
 }
 
 /* Screen Management */
@@ -95,18 +92,20 @@ body {
   width: 100vw;
   height: 100vh;
   background: url('images/background.png') center / cover no-repeat;
-  z-index: 0;
+  z-index: -1;
 }
 
 /* Birds Animation */
 .birds-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
 }
+
 
 .bird {
     position: absolute;
@@ -136,32 +135,34 @@ body {
     animation-duration: 14s, 0.4s;
 }
 
-/* Grass Layers */
 .grass-layer {
-    position: absolute;
-    bottom: 0;
-    left: -10vw; /* start slightly off-screen */
-    width: 120vw; /* extend beyond both edges */
-    height: 20px; /* Reduced to match reference proportions */
-    overflow: visible;
-    background-size: cover;
-    
+  position: fixed;
+  bottom: 0;
+  left: -5vw;
+  width: 110vw;
+  height: 25vh;
+  background-repeat: repeat-x;
+  background-size: cover;
+  transform-origin: bottom center;
+  overflow: visible;
 }
 
-
-
 .background-grass {
-    background-image: url('images/background-grass.png');
-    animation: sway 2s ease-in-out infinite;
-    transform-origin: bottom center;
-    z-index: 2; 
+  background-image: url('images/background-grass.png');
+  animation: sway 3s ease-in-out infinite;
+  z-index: 2;
 }
 
 .foreground-grass {
-    background-image: url('images/foreground-grass.png');
-    animation: sway 3s ease-in-out infinite;
-    transform-origin: bottom center;
-    z-index: 10;
+  background-image: url('images/foreground-grass.png');
+  animation: sway 4s ease-in-out infinite;
+  z-index: 10;
+}
+
+/* Gentle wind sway */
+@keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(1.5deg); }
 }
 
 /* Balloons Container */
