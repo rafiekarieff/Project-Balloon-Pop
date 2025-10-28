@@ -150,7 +150,8 @@ body {
 
 .background-grass {
   background-image: url('images/background-grass.png');
-  animation: layeredWind 3s ease-in-out infinite; 
+  animation: grassBob 4.5s ease-in-out infinite;
+  transform-origin: bottom center; 
   animation-delay: 1s;
   z-index: 2;
    
@@ -158,7 +159,8 @@ body {
 
 .foreground-grass {
     background-image: url('images/foreground-grass.png');
-    animation: layeredWind 4s ease-in-out infinite;
+    animation: grassBob 3.5s ease-in-out infinite;
+    transform-origin: bottom center;
     z-index: 10;
    
 }
@@ -280,11 +282,19 @@ body {
     75% { transform: translateX(-5px) translateY(-2px); }
 }
 
-@keyframes layeredWind {
-  0%, 100% { transform: rotate(0deg) translateY(0); }
-  25% { transform: rotate(1deg) translateY(2px); }
-  50% { transform: rotate(-1.5deg) translateY(-1px); }
-  75% { transform: rotate(0.8deg) translateY(1px); }
+@keyframes grassBob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  75% {
+    transform: translateY(2px);
+  }
 }
 
 /* Mobile Responsive */
