@@ -160,7 +160,7 @@ body {
 .foreground-grass {
     background-image: url('images/foreground-grass.png');
     animation: grassBob 3.5s ease-in-out infinite;
-    transform-origin: bottom center;
+    transform-origin: bottom center -10px;
     z-index: 10;
    
 }
