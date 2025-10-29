@@ -141,11 +141,11 @@ body {
   bottom: 0; 
   left: -6%;
   width: 110%;
-  height: 130px;
+  height: 160px;
   transform-origin: bottom center;
   overflow: visible;
   pointer-events: none; 
-  background-repeat: repeat-x;
+  
     
 }
 
