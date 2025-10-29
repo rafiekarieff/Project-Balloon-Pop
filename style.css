@@ -137,7 +137,6 @@ body {
 
 
 .grass-layer {
-  position: absolute
   bottom: 0; 
   left: -6%;
   width: 110%;
@@ -147,7 +146,7 @@ body {
   transform-origin: bottom;    /* keep it rooted */
   background-size: cover; 
   background-position: center bottom;  
-  position: absolute;
+  position: relative;
   top: 50px;  
 }
 
