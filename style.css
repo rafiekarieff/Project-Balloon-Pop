@@ -146,7 +146,7 @@ body {
   transform-origin: bottom;    /* keep it rooted */
   background-size: cover; 
   position: relative;
-  top: 10px;  
+    
 }
 
 .background-grass {
@@ -163,7 +163,7 @@ body {
     animation: grassBob 3.5s ease-in-out infinite;
     transform-origin: bottom center -20px;
     z-index: 10;
-    margin-top: 
+    
 }
 
 
