@@ -140,11 +140,11 @@ body {
   position: absolute; 
   bottom: 0; 
   left: -6%;
-  width: 50%;
+  width: 110%;
   overflow: hidden;
   pointer-events: none; 
   transform-origin: bottom;    /* keep it rooted */ 
-
+  transform: scale(0.8);       /* shrink to 80% size */
     
 }
 
