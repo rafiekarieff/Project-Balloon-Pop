@@ -306,7 +306,7 @@ body {
     }
     
     .start-button {
-        max-width: 60%; /* Maintain larger size on mobile */
+        max-width: 50%; /* Maintain larger size on mobile */
         max-height: 20vh;
     }
     
@@ -320,13 +320,13 @@ body {
     }
     
     .score-digit {
-        width: 50px; /* Larger digits on mobile */
-        height: 50px;
+        width: 25px; /* Larger digits on mobile */
+        height: 25px;
     }
     
     .back-button {
-        width: 50px; /* Larger button on mobile */
-        height: 50px;
+        width: 25px; /* Larger button on mobile */
+        height: 25px;
     }
 }
 
