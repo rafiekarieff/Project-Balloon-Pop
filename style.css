@@ -139,7 +139,7 @@ body {
 .grass-layer {
   position: absolute;
   bottom: 0; 
-  left: -5%;
+  left: -6%;
   width: 110%;
   height: 160px;
   transform-origin: bottom center;
@@ -160,7 +160,7 @@ body {
 .foreground-grass {
     background-image: url('images/foreground-grass.png');
     animation: grassBob 3.5s ease-in-out infinite;
-    transform-origin: bottom center -10px;
+    transform-origin: bottom center -20px;
     z-index: 10;
    
 }
