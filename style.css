@@ -136,7 +136,7 @@ body {
 }
 
 
-.grass-wrapper {
+.grass-layer {
   position: absolute;
   bottom: 0; 
   left: -6%;
@@ -145,7 +145,6 @@ body {
   overflow: visible;
   pointer-events: none; 
   transform-origin: bottom;    /* keep it rooted */
-  
   
 }
 
