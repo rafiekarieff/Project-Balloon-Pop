@@ -146,7 +146,7 @@ body {
   overflow: visible;
   pointer-events: none; 
   background-size: cover;
-  background-position: center bottom;  
+  background-position: bottom -10%;  
 }
 
 .background-grass {
