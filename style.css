@@ -135,6 +135,19 @@ body {
     animation-duration: 14s, 0.6s;
 }
 
+/* --- Grass Wrapper --- */
+.grass-container {
+  position: absolute; 
+  bottom: 0; 
+  left: -6%;
+  width: 110%;  
+  height: 160%;  
+  overflow: hidden;
+  pointer-events: none; 
+  transform-origin: bottom;    /* keep it rooted */ 
+  
+}
+
 
 .grass-layer {
   position: absolute; 
