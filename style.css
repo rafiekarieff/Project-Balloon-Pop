@@ -145,8 +145,8 @@ body {
   transform-origin: bottom center;
   overflow: visible;
   pointer-events: none; 
-  background-size: cover;
-  background-position: bottom -10%;  
+  size: cover;
+    
 }
 
 .background-grass {
