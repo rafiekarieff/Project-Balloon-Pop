@@ -137,7 +137,7 @@ body {
 
 
 .grass-layer {
-  position: absolute; 
+  position: relative; 
   bottom: 0; 
   left: -6%;
   width: 110%;
@@ -164,7 +164,7 @@ body {
     animation: grassBob 3.5s ease-in-out infinite;
     transform-origin: bottom center -20px;
     z-index: 10;
-    margin-top: 20px;
+    
 }
 
 
