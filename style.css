@@ -144,7 +144,7 @@ body {
   height: 160px;
   overflow: visible;
   pointer-events: none; 
-  transform: scale(0.8);       /* shrink to 80% size */
+  transform: scale(0,1);       /* shrink to 80% size */
   transform-origin: bottom;    /* keep it rooted */
     
 }
