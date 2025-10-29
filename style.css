@@ -158,7 +158,7 @@ body {
   overflow: hidden;
   pointer-events: none; 
   transform-origin: bottom;    /* keep it rooted */ 
-  
+  background-repeat: no-repeat;
 }
 
 .background-grass {
@@ -166,16 +166,14 @@ body {
   animation: grassBob 4.5s ease-in-out infinite;
   transform-origin: bottom center; 
   animation-delay: 1s;
-  z-index: 2;
-  background-repeat: repeat-x;       
+  z-index: 2;      
 }
 
 .foreground-grass {
     background-image: url('images/foreground-grass.png');
     animation: grassBob 3.5s ease-in-out infinite;
     transform-origin: bottom center -20px;
-    z-index: 10;
-    
+    z-index: 10;  
 }
 
 
