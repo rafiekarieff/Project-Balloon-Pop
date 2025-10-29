@@ -137,15 +137,14 @@ body {
 
 
 .grass-layer {
-  position: relative; 
+  position: absolute; 
   bottom: 0; 
   left: -6%;
   width: 110%;
   height: 160px;
   overflow: hidden;
   pointer-events: none; 
-  transform-origin: bottom;    /* keep it rooted */
-  background-size: cover; 
+  transform-origin: bottom;    /* keep it rooted */ 
 
     
 }
@@ -156,7 +155,6 @@ body {
   transform-origin: bottom center; 
   animation-delay: 1s;
   z-index: 2;
-  margin-top: 50px;
 }
 
 .foreground-grass {
