@@ -287,13 +287,13 @@ body {
     transform: translateY(0);
   }
   25% {
-    transform: translateY(2px);
+    transform: translateY(3px);
   }
   50% {
-    transform: translateY(4px);
+    transform: translateY(6px);
   }
   75% {
-    transform: translateY(2px);
+    transform: translateY(3px);
   }
 }
 
