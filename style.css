@@ -146,8 +146,7 @@ body {
   pointer-events: none; 
   transform-origin: bottom;    /* keep it rooted */
   background-size: cover;
-  object-fit: cover;
-  transform: translateY(20px); /* Moves the image down 200px */
+  
 }
 
 .background-grass {
