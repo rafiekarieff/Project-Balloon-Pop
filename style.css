@@ -139,7 +139,7 @@ body {
 .grass-layer {
   position: absolute;
   bottom: 0; 
-  left: -10%;
+  left: -5%;
   width: 110%;
   height: 160px;
   transform-origin: bottom center;
