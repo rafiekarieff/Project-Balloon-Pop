@@ -144,7 +144,7 @@ body {
   overflow: hidden;
   pointer-events: none; 
   transform-origin: bottom;    /* keep it rooted */ 
- 
+ transform: scale(1); 
     
 }
 
@@ -155,7 +155,7 @@ body {
   animation-delay: 1s;
   z-index: 2;
   height: 160px;
-  transform: scale(0.5);       /* shrink to 50% size */  
+         
 }
 
 .foreground-grass {
@@ -164,7 +164,7 @@ body {
     transform-origin: bottom center -20px;
     z-index: 10;
     height: 130px;
-    transform: scale(0.5);       /* shrink to 50% size */
+    
 }
 
 
