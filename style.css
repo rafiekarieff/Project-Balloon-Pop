@@ -145,9 +145,9 @@ body {
   pointer-events: none; 
   transform-origin: bottom;    /* keep it rooted */
   background-size: cover; 
-  background-position: center bottom;  
+  background-position: bottom;  
   position: relative;
-  top: 50px;  
+  top: 10px;  
 }
 
 .background-grass {
