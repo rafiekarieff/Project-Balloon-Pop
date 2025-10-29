@@ -146,7 +146,7 @@ body {
   pointer-events: none; 
   transform-origin: bottom;    /* keep it rooted */
   background-size: cover;
-  margin-top: 50px;
+  margin-top: 200px;
 }
 
 .background-grass {
