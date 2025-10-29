@@ -145,7 +145,7 @@ body {
   transform-origin: bottom center;
   overflow: visible;
   pointer-events: none; 
-  background-position: bottom;
+  background-repeat: repeat-x;
     
 }
 
