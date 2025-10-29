@@ -140,9 +140,8 @@ body {
   position: absolute;
   bottom: 0; 
   left: -6%;
-  width: 700px;
+  width: 110%;
   height: 160px;
-  transform-origin: bottom center;
   overflow: visible;
   pointer-events: none; 
   
