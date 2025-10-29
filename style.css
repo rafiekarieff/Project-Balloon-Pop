@@ -141,6 +141,7 @@ body {
   bottom: 0; 
   left: -6%;
   width: 110%;  
+  height: 160%;  
   overflow: visible;
   pointer-events: none; 
   transform-origin: bottom;    /* keep it rooted */ 
@@ -153,7 +154,7 @@ body {
   transform-origin: bottom center; 
   animation-delay: 1s;
   z-index: 2;
-  height: 160%;
+  
          
 }
 
@@ -162,7 +163,7 @@ body {
     animation: grassBob 3.5s ease-in-out infinite;
     transform-origin: bottom center -20px;
     z-index: 10;
-    height: 130%;
+    
     
 }
 
