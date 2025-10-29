@@ -146,8 +146,8 @@ body {
   pointer-events: none; 
   transform-origin: bottom;    /* keep it rooted */
   background-size: cover;
-  background-position: center top;
-  background-attachment: fixed;  
+  object-fit: cover;
+  transform: translateY(200px); /* Moves the image down 200px */
 }
 
 .background-grass {
