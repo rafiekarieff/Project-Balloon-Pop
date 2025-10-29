@@ -145,7 +145,7 @@ body {
   overflow: visible;
   pointer-events: none; 
   transform-origin: bottom;    /* keep it rooted */
-  
+  background-position: center 100px;
 }
 
 .background-grass {
@@ -162,7 +162,7 @@ body {
     animation: grassBob 3.5s ease-in-out infinite;
     transform-origin: bottom center -20px;
     z-index: 10;
-    padding-top: 100px;
+    margin-top: 100px;
 }
 
 
