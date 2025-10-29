@@ -49,8 +49,8 @@ body {
 }
 
 .title-logo {
-    max-width: 90%; /* Larger to match reference */
-    max-height: 45vh; /* Larger to match reference */
+    max-width: 100%; /* Larger to match reference */
+    max-height: 50vh; /* Larger to match reference */
     margin-bottom: 2rem;
     
 }
