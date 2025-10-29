@@ -156,7 +156,7 @@ body {
   transform-origin: bottom center; 
   animation-delay: 1s;
   z-index: 2;
-   
+  margin-top: 50px;
 }
 
 .foreground-grass {
