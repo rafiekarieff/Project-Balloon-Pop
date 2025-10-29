@@ -136,7 +136,7 @@ body {
 }
 
 
-.grass-layer {
+.grass-wrapper {
   position: absolute;
   bottom: 0; 
   left: -6%;
