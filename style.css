@@ -145,7 +145,6 @@ body {
   pointer-events: none; 
   transform-origin: bottom;    /* keep it rooted */
   background-size: cover; 
-  background-position: bottom;  
   position: relative;
   top: 10px;  
 }
