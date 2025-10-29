@@ -145,7 +145,8 @@ body {
   overflow: visible;
   pointer-events: none; 
   transform-origin: bottom;    /* keep it rooted */
-  object-fit: cover;
+  background-size: cover;
+  margin-top: 50px;
 }
 
 .background-grass {
