@@ -51,7 +51,7 @@ body {
 .title-logo {
     max-width: 100%; /* Larger to match reference */
     max-height: 50vh; /* Larger to match reference */
-    margin-bottom: 2rem;
+
     
 }
 
@@ -301,49 +301,49 @@ body {
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .title-logo {
-        max-width: 95%; /* Maintain larger size on mobile */
+        max-width: 80%; /* Maintain larger size on mobile */
         max-height: 40vh;
     }
     
     .start-button {
-        max-width: 55%; /* Maintain larger size on mobile */
-        max-height: 15vh;
+        max-width: 60%; /* Maintain larger size on mobile */
+        max-height: 20vh;
     }
     
     .bird {
-        width: 70px; /* Slightly larger birds */
+        width: 100px; /* Slightly larger birds */
         height: 50px;
     }
     
     .grass-layer {
-        height: 25%; /* Smaller grass on mobile */
+        height: 100%; /* Smaller grass on mobile */
     }
     
     .score-digit {
-        width: 35px; /* Larger digits on mobile */
-        height: 45px;
+        width: 50px; /* Larger digits on mobile */
+        height: 50px;
     }
     
     .back-button {
-        width: 45px; /* Larger button on mobile */
-        height: 45px;
+        width: 50px; /* Larger button on mobile */
+        height: 50px;
     }
 }
 
 @media (max-width: 480px) {
     .title-logo {
-        max-width: 98%; /* Even larger on small mobile */
-        max-height: 35vh;
+        max-width: 80%; /* Even larger on small mobile */
+        max-height: 40vh;
     }
     
     .start-button {
-        max-width: 85%; /* Even larger on small mobile */
-        max-height: 12vh;
+        max-width: 60%; /* Even larger on small mobile */
+        max-height: 30vh;
     }
     
     .bird {
-        width: 40px; /* Larger birds on small mobile */
-        height: 30px;
+        width: 50px; /* Larger birds on small mobile */
+        height: 50px;
     }
     
     .grass-layer {
@@ -351,12 +351,12 @@ body {
     }
     
     .score-digit {
-        width: 30px; /* Larger digits on small mobile */
-        height: 40px;
+        width: 50px; /* Larger digits on small mobile */
+        height: 50px;
     }
     
     .back-button {
-        width: 40px; /* Larger button on small mobile */
-        height: 40px;
+        width: 50px; /* Larger button on small mobile */
+        height: 50px;
     }
 }
