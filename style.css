@@ -135,48 +135,38 @@ body {
     animation-duration: 14s, 0.6s;
 }
 
-/* --- Grass Wrapper --- */
 .grass-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;  /* just enough to fit the image height */
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 10; /* above background */
-}
-
-/* --- Grass Layers --- */
-.grass-layer {
   position: absolute;
   bottom: -20px; /* push slightly below screen */
   left: 0;
   width: 100%;
-  height: auto;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: cover;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 10; /* above background, below balloons */
+}
+
+.grass-image {
+  display: block;
+  width: 110%;      /* slightly wider to cover screen edges */
+  height: auto;     /* keep proportions */
+  transform: translateY(10px); /* fine tune vertical placement */
+  animation: grassSway 4s ease-in-out infinite;
   transform-origin: bottom center;
-  animation: grassBob 4s ease-in-out infinite;
 }
 
 
 .background-grass {
-  background-image: url('images/background-grass.png');
   animation: grassBob 4.5s ease-in-out infinite;
   transform-origin: bottom center; 
   animation-delay: 1s;
-  z-index: 2;  
-    
+  z-index: 2;   
 }
 
 .foreground-grass {
-    background-image: url('images/foreground-grass.png');
     animation: grassBob 3.5s ease-in-out infinite;
     transform-origin: bottom center -20px;
     z-index: 10;  
-    
+    bottom: -30px;
 }
 
 
