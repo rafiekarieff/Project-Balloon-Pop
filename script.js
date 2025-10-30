@@ -82,9 +82,7 @@ function init() {
 
 // Start Game
 function startGame() {
-    console.log('startGame function called');
-    console.log('Start screen element:', startScreen);
-    console.log('Game screen element:', gameScreen);
+    console.log("Starting game…", startScreen, gameScreen, balloonsContainer);
     
     if (startScreen) {
         startScreen.classList.remove('active');
