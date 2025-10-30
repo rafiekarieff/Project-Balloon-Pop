@@ -142,7 +142,7 @@ body {
   left: -6%;
   width: 110%;  
   height: 160%;  
-  overflow: hidden;
+  overflow: visible;
   pointer-events: none; 
   transform-origin: bottom;    /* keep it rooted */ 
   
