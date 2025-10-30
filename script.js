@@ -125,6 +125,13 @@ function backToMenu() {
     // Clear all balloons
     balloonsContainer.innerHTML = '';
     gameState.balloons = [];
+
+    backButton.addEventListener("click", () => {
+  // Stop music when going back
+  bgMusic.pause();
+  bgMusic.currentTime = 0; // reset to start
+  showStartScreen(); // your function to return to start screen
+});
 }
 
 // Game Loop
