@@ -340,3 +340,11 @@ window.addEventListener('load', () => {
     // Natural side-to-side motion
     const bgOffset = Math.sin(t) * 10;   // smaller movement for background
     const fgOffset = Math.sin(t * 1.5) * 20; // bigger sway for foreground
+ if (bgGrass) bgGrass.style.transform = `translateX(${bgOffset}px)`;
+    if (fgGrass) fgGrass.style.transform = `translateX(${fgOffset}px)`;
+
+    requestAnimationFrame(animateGrass);
+  }
+
+  animateGrass();
+});
