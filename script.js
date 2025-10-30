@@ -44,6 +44,7 @@ const popSound = document.getElementById('popSound');
 const scoreHundreds = document.getElementById('scoreHundreds');
 const scoreTens = document.getElementById('scoreTens');
 const scoreOnes = document.getElementById('scoreOnes');
+const bgMusic = document.getElementById('bgMusic');
 
 // Initialize Game
 function init() {
