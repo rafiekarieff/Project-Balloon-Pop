@@ -341,6 +341,27 @@ window.addEventListener('load', () => {
     const bgOffset = Math.sin(t) * 10;   // smaller movement for background
     const fgOffset = Math.sin(t * 1.5) * 20; // bigger sway for foreground
 
+// Get references
+const bgMusic = document.getElementById('bgMusic');
+const popSound = document.getElementById('popSound');
+const startButton = document.getElementById('startButton');
+const backButton = document.getElementById('backButton');
+
+// Start game
+startButton.addEventListener('click', () => {
+    startGame();
+    bgMusic.volume = 0.4; // softer background
+    bgMusic.play().catch(err => console.log("Music blocked until user interacts:", err));
+});
+
+// Go back to menu
+backButton.addEventListener('click', () => {
+    endGame();
+    bgMusic.pause();
+    bgMusic.currentTime = 0; // restart music next time
+});
+
+      
     if (bgGrass) bgGrass.style.transform = `translateX(${bgOffset}px)`;
     if (fgGrass) fgGrass.style.transform = `translateX(${fgOffset}px)`;
 
