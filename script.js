@@ -46,6 +46,12 @@ const scoreTens = document.getElementById('scoreTens');
 const scoreOnes = document.getElementById('scoreOnes');
 const bgMusic = document.getElementById('bgMusic');
 
+document.getElementById("startButton").addEventListener("click", () => {
+  bgMusic.volume = 0.5; // adjust volume balance
+  bgMusic.play().catch(err => console.log("Autoplay blocked:", err));
+  startGame();
+});
+
 // Initialize Game
 function init() {
     console.log('Initializing game...');
