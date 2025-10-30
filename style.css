@@ -157,7 +157,9 @@ body {
   overflow: hidden;
   pointer-events: none; 
   transform-origin: bottom;    /* keep it rooted */ 
+  
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .background-grass {
