@@ -149,7 +149,7 @@ body {
   display: block;
   width: 250%;      /* slightly wider to cover screen edges */
   height: auto;     /* keep proportions */
-  bottom: -50px;
+  bottom: -30px;
   left: -75%;       /* center the wide image */
   pointer-events: none; 
   transform-origin: bottom center;    /* keep it rooted */ 
