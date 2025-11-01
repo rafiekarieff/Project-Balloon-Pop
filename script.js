@@ -133,8 +133,8 @@ function spawnBalloon() {
 
   const size = 150 + Math.random() * 80;
   const startX = Math.random() * (window.innerWidth - size);
-  const speed = 0.5 + Math.random() * 1;
-  const swayAmount = 3 + Math.random() * 4;
+  const speed = 1 + Math.random() * 2;
+  const swayAmount = 3 + Math.random() * 5;
 
   balloon.style.width = size + 'px';
   balloon.style.height = size + 'px';
