@@ -257,5 +257,18 @@ window.addEventListener('load', () => {
   animateGrass();
 });
 
+// --- FIX: Mobile Audio Unlock ---
+function unlockAudio() {
+  bgMusic.play().then(() => {
+    document.removeEventListener('touchstart', unlockAudio);
+    document.removeEventListener('click', unlockAudio);
+  }).catch(() => {});
+}
+
+// Attach unlock once
+document.addEventListener('touchstart', unlockAudio, { once: true });
+document.addEventListener('click', unlockAudio, { once: true });
+
+
 // 🧠 Initialize Game
 document.addEventListener("DOMContentLoaded", init);
