@@ -135,12 +135,12 @@ body {
 }
 
 .background-grass {
-  animation: grassBob 4.5s ease-in-out infinite;
+  animation: grassSway 2s ease-in-out infinite;
   z-index: 2;
 }
 
 .foreground-grass {
-  animation: grassBob 3.5s ease-in-out infinite;
+  animation: grassSway 2s ease-in-out infinite;
   z-index: 10;
 }
 
@@ -242,10 +242,6 @@ body {
   100% { transform: scale(0); opacity: 0; }
 }
 
-@keyframes grassBob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(4px); }
-}
 
 /* 🌱 Mobile Responsive */
 @media (max-width: 768px) {
