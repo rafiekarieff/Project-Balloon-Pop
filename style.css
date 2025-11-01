@@ -115,7 +115,7 @@ body {
 /* Grass */
 .grass-container {
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: 0;
   width: 100%;
   overflow: visible;
