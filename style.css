@@ -245,18 +245,65 @@ body {
 
 /* 🌱 Mobile Responsive */
 @media (max-width: 768px) {
-  .title-logo { max-width: 85%; max-height: 30vh; }
-  .start-button { max-width: 60%; max-height: 15vh; }
-  .bird { width: 80px; height: 50px; }
-  .grass-image { width: 140%; left: -20%; } /* keep grass filling edges */
-  .score-digit { width: 40px; }
-  .back-button { width: 50px; }
+  .title-logo {
+    max-width: 85%;
+    max-height: 35vh;
+  }
+
+  .start-button {
+    max-width: 40%;
+    max-height: 12vh;
+  }
+
+  .bird {
+    width: 120px;
+    height: 70px;
+  }
+
+  .grass-image {
+    width: 300%;
+    height: auto;  /* taller grass */
+    left: -50%;
+    bottom: -5%;   /* rooted better */
+  }
+
+  .score-digit {
+    width: 30px;
+  }
+
+  .back-button {
+    width: 40px;
+  }
 }
 
 @media (max-width: 480px) {
-  .title-logo { max-width: 90%; max-height: 25vh; }
-  .start-button { max-width: 70%; max-height: 20vh; }
-  .bird { width: 60px; height: 40px; }
-  .grass-image { width: 160%; left: -30%; }
-  .score-digit, .back-button { width: 40px; }
+  .title-logo {
+    max-width: 90%;
+    max-height: 32vh;
+  }
+
+  .start-button {
+    max-width: 45%;
+    max-height: 15vh;
+  }
+
+  .bird {
+    width: 100px;
+    height: 60px;
+  }
+
+  .grass-image {
+    width: 350%;
+    height: auto;  /* extra tall for tiny screens */
+    left: -50%;
+    bottom: -10%;
+  }
+
+  .score-digit {
+    width: 25px;
+  }
+
+  .back-button {
+    width: 35px;
+  }
 }
