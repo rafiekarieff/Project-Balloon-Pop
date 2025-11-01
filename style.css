@@ -246,33 +246,33 @@ body {
 /* 🌱 Mobile Responsive */
 @media (max-width: 768px) {
   .title-logo {
-    max-width: 85%;
-    max-height: 35vh;
+    max-width: 90%;
+    max-height: 32vh;
   }
 
   .start-button {
     max-width: 40%;
-    max-height: 12vh;
+    max-height: 15vh;
   }
 
   .bird {
-    width: 120px;
-    height: 70px;
+    width: 100px;
+    height: 60px;
   }
 
   .grass-image {
-    width: 300%;
-    height: auto;  /* taller grass */
+    width: 1500px;
+    height: auto;  /* extra tall for tiny screens */
     left: -50%;
-    bottom: -5%;   /* rooted better */
+    bottom: -10%;
   }
 
   .score-digit {
-    width: 30px;
+    width: 25px;
   }
 
   .back-button {
-    width: 40px;
+    width: 35px;
   }
 }
 
@@ -283,7 +283,7 @@ body {
   }
 
   .start-button {
-    max-width: 45%;
+    max-width: 40%;
     max-height: 15vh;
   }
 
@@ -293,7 +293,7 @@ body {
   }
 
   .grass-image {
-    width: 350%;
+    width: 1500px;
     height: auto;  /* extra tall for tiny screens */
     left: -50%;
     bottom: -10%;
