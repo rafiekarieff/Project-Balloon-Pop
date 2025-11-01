@@ -1,8 +1,8 @@
 /* Reset and Base Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -16,64 +16,57 @@ body {
 
 /* Screen Management */
 .screen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
 
 .screen.active {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Start Screen */
 #startScreen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("images/background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./images/background.png") center / cover no-repeat;
 }
 
 .start-content {
-    text-align: center;
-    animation: float 3s ease-in-out infinite;
+  text-align: center;
+  animation: float 3s ease-in-out infinite;
 }
 
 .title-logo {
-    max-width: 100%; /* Larger to match reference */
-    max-height: 250px; /* Larger to match reference */
-
-    
+  max-width: 100%;
+  max-height: 250px;
 }
 
 .start-button {
-    max-width: 100%; /* Larger to match reference */
-    max-height: 60px; /* Larger to match reference */
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    
+  max-width: 100%;
+  max-height: 60px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
 .start-button:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .start-button:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 /* Game Screen */
 #gameScreen {
-    position: relative;
+  position: relative;
 }
 
 .game-background {
@@ -82,8 +75,9 @@ body {
   width: 100vw;
   height: 100vh;
   background: transparent;
-  touch-action: none; /* prevents background "scrolling" on touch */
+  touch-action: none;
 }
+
 /* Sky Background */
 .sky {
   position: fixed;
@@ -91,11 +85,11 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('images/background.png') center / cover no-repeat;
+  background: url("./images/background.png") center / cover no-repeat;
   z-index: -1;
 }
 
-/* Birds Animation */
+/* Birds */
 .birds-container {
   position: fixed;
   top: 0;
@@ -106,262 +100,167 @@ body {
   z-index: 3;
 }
 
-
 .bird {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    background-image: url('images/bird-frame-1.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: birdFly 8s linear infinite, birdFlap 0.5s steps(5) infinite;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background: url("./images/bird-frame-1.png") center / contain no-repeat;
+  animation: birdFly 8s linear infinite, birdFlap 0.5s steps(5) infinite;
 }
 
-.bird-1 {
-    top: 15%;
-    animation-delay: 0s;
-    animation-duration: 12s, 0.5s;
-}
+.bird-1 { top: 15%; animation-delay: 0s; animation-duration: 12s, 0.5s; }
+.bird-2 { top: 25%; animation-delay: -4s; animation-duration: 10s, 0.4s; }
+.bird-3 { top: 35%; animation-delay: -8s; animation-duration: 14s, 0.6s; }
 
-.bird-2 {
-    top: 25%;
-    animation-delay: -4s;
-    animation-duration: 10s, 0.4s;
-}
-
-.bird-3 {
-    top: 35%;
-    animation-delay: -8s;
-    animation-duration: 14s, 0.6s;
-}
-
+/* Grass */
 .grass-container {
-  position: relative;
-  bottom: 0; /* push slightly below screen */
+  position: absolute;
+  bottom: 0;
   left: 0;
-  width: 110%;
+  width: 100%;
   overflow: visible;
-  z-index: 10; /* above background, below balloons */
+  z-index: 10;
+  pointer-events: none;
 }
 
+/* Each layer (background + foreground) */
 .grass-image {
-  position: fixed;
-  display: block;
-  width: 250%;      /* slightly wider to cover screen edges */
-  height: auto;     /* keep proportions */
-  bottom:0;
-  left: -75%;       /* center the wide image */
-  pointer-events: none; 
-  transform-origin: bottom center;    /* keep it rooted */ 
-  
+  position: absolute;
+  width: 120%;
+  left: -10%;
+  bottom: 0;
+  height: auto;
+  transform-origin: bottom center;
+  pointer-events: none;
 }
-
 
 .background-grass {
-  animation: grassBob 4.5s ease-in-out infinite; 
-  animation-delay: 1s;
+  animation: grassBob 4.5s ease-in-out infinite;
   z-index: 2;
-  
 }
 
 .foreground-grass {
-    animation: grassBob 3.5s ease-in-out infinite;
-    z-index: 10;
-    
-    
+  animation: grassBob 3.5s ease-in-out infinite;
+  z-index: 10;
 }
 
-
-/* Balloons Container */
+/* Balloons */
 .balloons-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
 }
 
 .balloon {
-    position: absolute;
-    cursor: pointer;
-    pointer-events: auto;
-    transition: transform 0.1s ease;
-    z-index: 6;
+  position: absolute;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.1s ease;
+  z-index: 6;
 }
 
 .balloon:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .balloon.popping {
-    pointer-events: none;
-    animation: balloonPop 0.3s ease-out forwards;
+  pointer-events: none;
+  animation: balloonPop 0.3s ease-out forwards;
 }
 
-/* Game UI */
+/* UI */
 .game-ui {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 20;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  pointer-events: none;
 }
 
 .score-display {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    gap: 2px;
-    pointer-events: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 2px;
+  pointer-events: none;
 }
 
 .score-digit {
-    width: 50px;
-    height: auto; /* Larger to match reference */
-    
+  width: 50px;
+  height: auto;
 }
 
 .back-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 70px; /* Larger to match reference */
-    height: auto;
-    cursor: pointer;
-    pointer-events: auto;
-    transition: transform 0.2s ease;
-    
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 70px;
+  height: auto;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.2s ease;
 }
 
 .back-button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .back-button:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 /* Animations */
 @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes birdFly {
-    0% { transform: translateX(-100px); }
-    100% { transform: translateX(calc(100vw + 100px)); }
+  0% { transform: translateX(-100px); }
+  100% { transform: translateX(calc(100vw + 100px)); }
 }
 
 @keyframes birdFlap {
-    0% { background-image: url('images/bird-frame-1.png'); }
-    20% { background-image: url('images/bird-frame-2.png'); }
-    40% { background-image: url('images/bird-frame-3.png'); }
-    60% { background-image: url('images/bird-frame-4.png'); }
-    80% { background-image: url('images/bird-frame-5.png'); }
-    100% { background-image: url('images/bird-frame-1.png'); }
+  0% { background-image: url("./images/bird-frame-1.png"); }
+  20% { background-image: url("./images/bird-frame-2.png"); }
+  40% { background-image: url("./images/bird-frame-3.png"); }
+  60% { background-image: url("./images/bird-frame-4.png"); }
+  80% { background-image: url("./images/bird-frame-5.png"); }
+  100% { background-image: url("./images/bird-frame-1.png"); }
 }
 
 @keyframes balloonPop {
-    0% { 
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% { 
-        transform: scale(1.2);
-        opacity: 0.8;
-    }
-    100% { 
-        transform: scale(0);
-        opacity: 0;
-    }
-}
-
-@keyframes balloonFloat {
-    0%, 100% { transform: translateX(0px) translateY(0px); }
-    25% { transform: translateX(5px) translateY(-2px); }
-    50% { transform: translateX(0px) translateY(-5px); }
-    75% { transform: translateX(-5px) translateY(-2px); }
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(0); opacity: 0; }
 }
 
 @keyframes grassBob {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(3px);
-  }
-  50% {
-    transform: translateY(6px);
-  }
-  75% {
-    transform: translateY(3px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
 }
 
-/* Mobile Responsive */
+/* 🌱 Mobile Responsive */
 @media (max-width: 768px) {
-    .title-logo {
-        max-width: 80%; /* Maintain larger size on mobile */
-        max-height: 40vh;
-    }
-    
-    .start-button {
-        max-width: 50%; /* Maintain larger size on mobile */
-        max-height: 20vh;
-    }
-    
-    .bird {
-        width: 100px; /* Slightly larger birds */
-        height: 50px;
-    }
-    
-    .grass-layer {
-        height: 100%; /* Smaller grass on mobile */
-    }
-    
-    .score-digit {
-        width: 25px; /* Larger digits on mobile */
-        height: 25px;
-    }
-    
-    .back-button {
-        width: 25px; /* Larger button on mobile */
-        height: 25px;
-    }
+  .title-logo { max-width: 85%; max-height: 30vh; }
+  .start-button { max-width: 60%; max-height: 15vh; }
+  .bird { width: 80px; height: 50px; }
+  .grass-image { width: 140%; left: -20%; } /* keep grass filling edges */
+  .score-digit { width: 40px; }
+  .back-button { width: 50px; }
 }
 
 @media (max-width: 480px) {
-    .title-logo {
-        max-width: 80%; /* Even larger on small mobile */
-        max-height: 40vh;
-    }
-    
-    .start-button {
-        max-width: 60%; /* Even larger on small mobile */
-        max-height: 30vh;
-    }
-    
-    .bird {
-        width: 50px; /* Larger birds on small mobile */
-        height: 50px;
-    }
-    
-    .grass-layer {
-        height: 12%; /* Even smaller grass on small mobile */
-    }
-    
-    .score-digit {
-        width: 50px; /* Larger digits on small mobile */
-        height: 50px;
-    }
-    
-    .back-button {
-        width: 50px; /* Larger button on small mobile */
-        height: 50px;
-    }
+  .title-logo { max-width: 90%; max-height: 25vh; }
+  .start-button { max-width: 70%; max-height: 20vh; }
+  .bird { width: 60px; height: 40px; }
+  .grass-image { width: 160%; left: -30%; }
+  .score-digit, .back-button { width: 40px; }
 }
