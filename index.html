@@ -1,149 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-  >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="#87CEEB">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Balloon Pop Game</title>
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* 🧭 Prevent scrolling and zooming globally */
-    html, body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      height: 100%;
-      touch-action: none;
-    }
-
-    /* ✅ Ensure fixed layout on mobile browsers */
-    .screen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      display: none;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .screen.active {
-      display: flex;
-    }
-
-    /* 🎨 Start Screen (covers entire view) */
-    #startScreen {
-      z-index: 10;
-      background: linear-gradient(#6dd5fa, #2980b9);
-      flex-direction: column;
-      transition: opacity 0.4s ease;
-    }
-
-    /* 🎮 Game Screen (hidden until start) */
-    #gameScreen {
-      z-index: 5;
-      background: transparent;
-    }
-
-    /* 🌱 Adjust background grass layering */
-    .grass-container {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      z-index: 2;
-      overflow: hidden;
-    }
-
-    /* 🐦 Birds always behind UI */
-    .birds-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    /* 📱 Mobile Scaling */
-    @media (max-width: 768px) {
-      .title-logo { width: 90%; height: auto; }
-      .start-button { width: 55%; }
-      .score-digit { width: 35px; }
-      .back-button { width: 40px; }
-      .grass-image { width: 220%; left: -60%; }
-    }
-
-    @media (max-width: 480px) {
-      .title-logo { width: 95%; }
-      .start-button { width: 60%; }
-      .score-digit { width: 28px; }
-      .back-button { width: 36px; }
-      .grass-image { width: 250%; left: -70%; }
-    }
-  </style>
+    <title>Balloon Pop Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- Fixed background -->
-  <div class="sky"></div>
+    <!-- Fixed background -->
+    <div class="sky"></div>
 
-  <!-- Birds & Grass -->
-  <div class="birds-container">
-    <div class="bird bird-1"></div>
-    <div class="bird bird-2"></div>
-    <div class="bird bird-3"></div>
-  </div>
+    <!-- Birds and Grass visible on all screens -->
+    <div class="birds-container">
+        <div class="bird bird-1"></div>
+        <div class="bird bird-2"></div>
+        <div class="bird bird-3"></div>
+    </div>
 
-  <div class="grass-container">
+    <div class="grass-container">
     <img src="images/background-grass.png" class="grass-image background-grass">
     <img src="images/foreground-grass.png" class="grass-image foreground-grass">
-  </div>
-
-  <!-- 🏁 Start Screen -->
-  <div id="startScreen" class="screen active">
-    <div class="start-content">
-      <img src="images/logo.png" alt="Balloon Pop Game" class="title-logo">
-      <br><br><br>
-      <img src="images/start-button.png" alt="Start Game" class="start-button" id="startButton">
-    </div>
-  </div>
-
-  <!-- 🎮 Game Screen -->
-  <div id="gameScreen" class="screen">
-    <div class="game-background">
-      <div id="balloonsContainer" class="balloons-container"></div>
     </div>
 
-    <div class="game-ui">
-      <div class="score-display">
-        <img src="images/no-0.png" alt="0" class="score-digit" id="scoreHundreds">
-        <img src="images/no-0.png" alt="0" class="score-digit" id="scoreTens">
-        <img src="images/no-0.png" alt="0" class="score-digit" id="scoreOnes">
-      </div>
-      <img src="images/back-icon.png" alt="Back" class="back-button" id="backButton">
+    
+    <!-- Start Screen -->
+    <div id="startScreen" class="screen active">
+        <div class="start-content">
+            <img src="images/logo.png" alt="Balloon Pop Game" class="title-logo">
+            <br><br><br>
+            <img src="images/start-button.png" alt="Start Game" class="start-button" id="startButton">
+        </div>
     </div>
-  </div>
 
-  <!-- 🔊 Audio Elements -->
-  <audio id="popSound" preload="auto">
-    <source src="sounds/pop.wav" type="audio/wav">
-  </audio>
+    <!-- Game Screen -->
+    <div id="gameScreen" class="screen">
+        <div class="game-background">
+            <!-- Balloons Container -->
+            <div id="balloonsContainer" class="balloons-container"></div>
+        </div>
 
-  <audio id="bgMusic" loop preload="auto">
-    <source src="sounds/background-theme.mp3" type="audio/mpeg">
-  </audio>
+        <!-- Game UI -->
+        <div class="game-ui">
+            <div class="score-display">
+                <img src="images/no-0.png" alt="0" class="score-digit" id="scoreHundreds">
+                <img src="images/no-0.png" alt="0" class="score-digit" id="scoreTens">
+                <img src="images/no-0.png" alt="0" class="score-digit" id="scoreOnes">
+            </div>
+            <img src="images/back-icon.png" alt="Back" class="back-button" id="backButton">
+        </div>
+    </div>
 
-  <script src="script.js"></script>
+    <!-- Audio Elements -->
+
+ <audio id="popSound" preload="auto">
+        <source src="sounds/pop.wav" type="audio/wav">
+    </audio>
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="sounds/background-theme.mp3" type="audio/mpeg">
+</audio>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
