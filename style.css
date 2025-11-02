@@ -292,62 +292,64 @@ body {
 /* 🌱 Mobile Responsive */
 @media (max-width: 768px) {
   .title-logo {
-    max-width: 95%;
-    max-height: 35vh; /* slightly bigger */
+    max-width: 90%;
+    max-height: 32vh;
   }
 
   .start-button {
-    max-width: 50%;
-    max-height: 12vh; /* smaller */
+    max-width: 40%;
+    max-height: 15vh;
   }
 
   .bird {
-    width: 120px;
-    height: 70px; /* larger birds */
+    width: 100px;
+    height: 60px;
   }
 
   .grass-image {
-    width: 200%;   /* much larger grass */
+    width: 1500px;
+    height: auto;  /* extra tall for tiny screens */
     left: -50%;
-    bottom: 0;
+    bottom: -10%;
   }
 
   .score-digit {
-    width: 30px; /* smaller score */
+    width: 25px;
   }
 
   .back-button {
-    width: 40px; /* smaller back button */
+    width: 35px;
   }
 }
 
 @media (max-width: 480px) {
   .title-logo {
-    max-width: 100%;
-    max-height: 32vh; /* slightly bigger */
+    max-width: 90%;
+    max-height: 32vh;
   }
 
   .start-button {
-    max-width: 55%;
-    max-height: 15vh; /* smaller */
+    max-width: 40%;
+    max-height: 15vh;
   }
 
   .bird {
     width: 100px;
-    height: 60px; /* nice balance */
+    height: 60px;
   }
 
   .grass-image {
-    width: 240%; /* very wide so it fills naturally */
-    left: -70%;
-    bottom: 0;
+    width: 1500px;
+    height: auto;  /* extra tall for tiny screens */
+    left: -50%;
+    bottom: -10%;
   }
 
   .score-digit {
-    width: 25px; /* smaller digits */
+    width: 25px;
   }
 
   .back-button {
-    width: 35px; /* smaller back icon */
+    width: 35px;
   }
 }
