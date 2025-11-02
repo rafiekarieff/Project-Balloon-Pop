@@ -276,3 +276,11 @@ document.addEventListener("DOMContentLoaded", init);
 window.addEventListener('resize', () => {
   document.documentElement.style.height = `${window.innerHeight}px`;
 });
+// Adjust viewport height dynamically for mobile browsers
+function fixViewportHeight() {
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+  document.body.style.height = `${window.innerHeight}px`;
+}
+window.addEventListener('resize', fixViewportHeight);
+window.addEventListener('orientationchange', fixViewportHeight);
+fixViewportHeight();
