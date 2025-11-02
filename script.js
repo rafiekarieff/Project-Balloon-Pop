@@ -272,3 +272,7 @@ document.addEventListener('click', unlockAudio, { once: true });
 
 // 🧠 Initialize Game
 document.addEventListener("DOMContentLoaded", init);
+
+window.addEventListener('resize', () => {
+  document.documentElement.style.height = `${window.innerHeight}px`;
+});
