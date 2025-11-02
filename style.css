@@ -12,8 +12,6 @@ body {
   width: 100vw;
   background: #87CEEB;
   position: relative;
-  touch-action: none; /* 🚫 no touch scroll/pan */
-  overscroll-behavior: none; /* 🚫 stops bounce on mobile */
 }
 
 /* Screen Management */
@@ -26,8 +24,6 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-  overflow: hidden;
-  position: fixed;
 }
 
 .screen.active {
