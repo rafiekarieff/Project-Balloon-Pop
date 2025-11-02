@@ -12,6 +12,9 @@ body {
   width: 100vw;
   background: #87CEEB;
   position: relative;
+  overflow: hidden;             /* prevent scroll */
+  touch-action: none;           /* stop mobile panning */
+  overscroll-behavior: none;    /* prevent rubber-band bounce */
 }
 
 /* Screen Management */
