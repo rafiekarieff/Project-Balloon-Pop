@@ -338,7 +338,7 @@ body {
   }
 
   .grass-image {
-    width: 1600px;
+    width: 2000px;
     height: auto;  /* extra tall for tiny screens */
     left: -50%;
     bottom: -10%;
