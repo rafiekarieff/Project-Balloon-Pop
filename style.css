@@ -291,7 +291,7 @@ body {
 /* 🌱 Mobile Responsive */
 @media (max-width: 768px) {
   .title-logo {
-    max-width: 90%;
+    max-width: 100%;
     max-height: 32vh;
   }
 
