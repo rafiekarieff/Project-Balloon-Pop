@@ -43,17 +43,10 @@ body {
 
 /* Start Screen */
 #startScreen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: url("./images/background.png") center / cover no-repeat;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  background: url("./images/background.png") center / cover no-repeat;
 }
 
 .start-content {
@@ -83,14 +76,7 @@ body {
 
 /* Game Screen */
 #gameScreen {
- position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  display: none; /* hidden until Start pressed */
-  z-index: 5;
+  position: relative;
 }
 
 .game-background {
