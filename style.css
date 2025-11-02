@@ -291,7 +291,6 @@ body {
 
 /* 🌱 Mobile Responsive */
 @media (max-width: 768px) {
-<<<<<<< HEAD
   .title-logo {
     max-width: 95%;
     max-height: 35vh; /* slightly bigger */
@@ -351,20 +350,4 @@ body {
   .back-button {
     width: 35px; /* smaller back icon */
   }
-=======
-  .title-logo { max-width: 85%; max-height: 30vh; }
-  .start-button { max-width: 60%; max-height: 15vh; }
-  .bird { width: 80px; height: 50px; }
-  .grass-image { width: 140%; left: -20%; } /* keep grass filling edges */
-  .score-digit { width: 40px; }
-  .back-button { width: 50px; }
-}
-
-@media (max-width: 480px) {
-  .title-logo { max-width: 90%; max-height: 25vh; }
-  .start-button { max-width: 70%; max-height: 20vh; }
-  .bird { width: 60px; height: 40px; }
-  .grass-image { width: 160%; left: -30%; }
-  .score-digit, .back-button { width: 40px; }
->>>>>>> parent of 7207b36 (mobile update)
 }
