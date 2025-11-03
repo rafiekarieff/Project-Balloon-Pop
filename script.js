@@ -279,3 +279,8 @@ document.addEventListener('click', unlockAudio, { once: true });
 
 // 🧠 Initialize Game
 document.addEventListener("DOMContentLoaded", init);
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js')
+    .then(() => console.log('Service Worker Registered'));
+}
