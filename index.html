@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Play Balloon Pop Game – a fun, fast balloon popping challenge with smooth animation and cute birds!">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-   <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#87CEEB">
-<link rel="preload" as="image" href="images/logo.webp">
-<link rel="preload" as="image" href="images/start-button.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Balloon Pop Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-
     <!-- Fixed background -->
     <div class="sky"></div>
 
@@ -24,10 +18,8 @@
     </div>
 
     <div class="grass-container">
-    <img src="images/background-grass.webp" alt="background-grass"
-    class="grass-image background-grass">
-    <img src="images/foreground-grass.webp" alt="foreground-grass"
-    class="grass-image foreground-grass">
+    <img src="images/background-grass.webp" class="grass-image background-grass">
+    <img src="images/foreground-grass.webp" class="grass-image foreground-grass">
     </div>
 
     
@@ -72,16 +64,6 @@
 </audio>
 
     <script src="script.js"></script>
-    <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('service-worker.js')
-      .then(reg => console.log('Service Worker registered!', reg))
-      .catch(err => console.log('Service Worker registration failed!', err));
-    });
-  }
-</script>
-
 </body>
 
 </html>
