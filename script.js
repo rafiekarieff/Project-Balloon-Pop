@@ -11,27 +11,34 @@ let gameState = {
 
 // 🎈 Balloon Types
 const balloonTypes = [
-  { color: 'red', image: 'images/red-balloon.png', popImage: 'images/red-pop.png' },
-  { color: 'blue', image: 'images/blue-balloon.png', popImage: 'images/blue-pop.png' },
-  { color: 'green', image: 'images/green-balloon.png', popImage: 'images/green-pop.png' },
-  { color: 'yellow', image: 'images/yellow-balloon.png', popImage: 'images/yellow-pop.png' },
-  { color: 'orange', image: 'images/orange-balloon.png', popImage: 'images/orange-pop.png' },
-  { color: 'pink', image: 'images/pink-balloon.png', popImage: 'images/pink-pop.png' },
-  { color: 'purple', image: 'images/purple-balloon.png', popImage: 'images/purple-pop.png' },
+  { color: 'red', image: 'images/red-balloon.webp',
+     popImage: 'images/red-pop.webp' },
+  { color: 'blue', image: 'images/blue-balloon.webp',
+    popImage: 'images/blue-pop.webp' },
+  { color: 'green', image: 'images/green-balloon.webp',
+     popImage: 'images/green-pop.webp' },
+  { color: 'yellow', image: 'images/yellow-balloon.webp',
+     popImage: 'images/yellow-pop.webp' },
+  { color: 'orange', image: 'images/orange-balloon.webp',
+     popImage: 'images/orange-pop.webp' },
+  { color: 'pink', image: 'images/pink-balloon.webp',
+     popImage: 'images/pink-pop.webp' },
+  { color: 'purple', image: 'images/purple-balloon.webp',
+     popImage: 'images/purple-pop.webp' },
 ];
 
 // 🔢 Digit Images
 const digitImages = {
-  0: 'images/no-0.png',
-  1: 'images/no-1.png',
-  2: 'images/no-2.png',
-  3: 'images/no-3.png',
-  4: 'images/no-4.png',
-  5: 'images/no-5.png',
-  6: 'images/no-6.png',
-  7: 'images/no-7.png',
-  8: 'images/no-8.png',
-  9: 'images/no-9.png',
+  0: 'images/no-0.webp',
+  1: 'images/no-1.webp',
+  2: 'images/no-2.webp',
+  3: 'images/no-3.webp',
+  4: 'images/no-4.webp',
+  5: 'images/no-5.webp',
+  6: 'images/no-6.webp',
+  7: 'images/no-7.webp',
+  8: 'images/no-8.webp',
+  9: 'images/no-9.webp',
 };
 
 // 🧩 DOM Elements

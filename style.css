@@ -39,7 +39,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("./images/background.png") center / cover no-repeat;
+  background: url("./images/background.webp") center / cover no-repeat;
 }
 
 .start-content {
@@ -88,7 +88,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url("./images/background.png") center / cover no-repeat;
+  background: url("./images/background.webp") center / cover no-repeat;
   z-index: -1;
 }
 
@@ -110,7 +110,7 @@ body {
   position: absolute;
   width: 120px; /* ⬅️ smaller hitbox instead of 100% */
   height: 100px;
-  background: url("./images/bird-frame-1.png") center / contain no-repeat;
+  background: url("./images/bird-frame-1.webp") center / contain no-repeat;
   animation: birdFly 12s linear infinite, birdFlap 0.5s steps(5) infinite;
   will-change: transform, opacity;
   backface-visibility: hidden;
@@ -273,12 +273,12 @@ body {
 }
 
 @keyframes birdFlap {
-  0% { background-image: url("./images/bird-frame-1.png"); }
-  20% { background-image: url("./images/bird-frame-2.png"); }
-  40% { background-image: url("./images/bird-frame-3.png"); }
-  60% { background-image: url("./images/bird-frame-4.png"); }
-  80% { background-image: url("./images/bird-frame-5.png"); }
-  100% { background-image: url("./images/bird-frame-1.png"); }
+  0% { background-image: url("./images/bird-frame-1.webp"); }
+  20% { background-image: url("./images/bird-frame-2.webp"); }
+  40% { background-image: url("./images/bird-frame-3.webp"); }
+  60% { background-image: url("./images/bird-frame-4.webp"); }
+  80% { background-image: url("./images/bird-frame-5.webp"); }
+  100% { background-image: url("./images/bird-frame-1.webp"); }
 }
 
 @keyframes balloonPop {
