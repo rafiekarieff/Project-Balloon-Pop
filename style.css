@@ -19,7 +19,7 @@ body {
 
 /* Screen Management */
 .screen {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -27,6 +27,8 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  overflow: hidden;
+  
 }
 
 .screen.active {
